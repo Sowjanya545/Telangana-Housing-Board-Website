@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Telangana Housing Board</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.login-container{
+    width:400px;
+    margin:60px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+.login-container h2{
+    text-align:center;
+    color:#003b6d;
+    margin-bottom:20px;
+}
+
+.login-container label{
+    font-weight:bold;
+}
+
+.login-container input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+.login-container button{
+    width:100%;
+    padding:12px;
+    background:#003b6d;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.login-container button:hover{
+    background:#005999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="Logo">
+
+<div>
+
+<h1>TELANGANA</h1>
+
+<h3>Housing Board</h3>
+
+</div>
+
+</div>
+
+<div class="leaders">
+
+<div class="leader">
+
+<img src="cm.jpg" alt="Chief Minister">
+
+<p><b>Sri. A. Revanth Reddy</b></p>
+
+<p>Chief Minister</p>
+
+</div>
+
+<div class="leader">
+
+<img src="minister.jpg" alt="Housing Minister">
+
+<p><b>Sri. Ponguleti Srinivasa Reddy</b></p>
+
+<p>Housing Minister</p>
+
+</div>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="news.html">News</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<div class="login-container">
+
+<h2>User Login</h2>
+
+<form onsubmit="return validateLogin()">
+
+<label>Username</label>
+
+<input
+type="text"
+id="username"
+placeholder="Enter Username"
+required>
+
+<label>Password</label>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+required>
+
+<button type="submit">
+
+Login
+
+</button>
+
+</form>
+
+</div>
+
+<footer>
+
+<p>© 2026 Telangana Housing Board</p>
+
+<p>Email : info@thb.gov.in</p>
+
+<p>Phone : 040-12345678</p>
+
+</footer>
+
+<script>
+
+function validateLogin(){
+
+var username=document.getElementById("username").value;
+var password=document.getElementById("password").value;
+
+if(username=="admin" && password=="admin123"){
+
+alert("Login Successful");
+
+window.location.href="index.html";
+
+}
+else{
+
+alert("Invalid Username or Password");
+
+}
+
+return false;
+
+}
+
+</script>
+
+</body>
+</html>
